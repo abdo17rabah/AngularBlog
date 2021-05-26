@@ -1,0 +1,27 @@
+<div [ngClass]="postLoveIts > 0 ? 'my-3 p-3 bg-white rounded shadow-sm border border-success' : 'my-3 p-3 bg-white rounded shadow-sm border border-danger' ">
+  <div class="media text-muted pt-3">
+    <p class="media-body pb-3 mb-0 small lh-125">
+      <span class="d-block" style="margin-bottom: 10px;">
+        <strong class="h3 text-left"> {{ postTitle }} </strong>
+      </span>
+      {{ postContent }}
+    </p>
+    <span class="h6 text-right pt-1.2">{{ postCreatedAt | date: 'short' }}</span>
+    <div style="margin-top: 40px;">
+      <div>
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="margin-right: 10px; margin-bottom: 10px;" (click)="onLike()">
+          <i class="fa fa-thumbs-up"></i>
+        </button>
+      </div>
+      <div>
+        <button ml-3 type="button" class="btn btn-danger" (click)="onDislike()">
+          <i class="fa fa-thumbs-down"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <span [ngClass]="postLoveIts > 0 ?'badge badge-info' : 'badge badge-danger'">Likes: {{postLoveIts}}</span>
+</div>

@@ -10,20 +10,20 @@ export class AppComponent {
 
   posts = [
     {
-      title: 'First Post',
-      content: 'Circa hos dies Lollianus primae lanuginis adulescens, Lampadi filius ex praefecto, exploratius causam Maximino spectante, convictus codicem noxiarum artium nondum per aetatem firmato consilio descripsisse, exulque mittendus, ut sperabatur, patris inpulsu provocavit ad principem, et iussus ad eius comitatum duci, de fumo, ut aiunt, in flammam traditus Phalangio Baeticae consulari cecidit funesti carnificis manu.',
+      title: 'Wijnaldum rumors',
+      content: 'Both Barcelona and Bayern Munich are targeting Liverpool midfielder Georginio Wijnaldum who will leave Anfield as a free agent in June when his contract expires.Barcelona have not ruled out signing Wijnaldum after meeting with the midfielder’s agents last week. Ronald Koeman likes the Dutchman but Barca would rather sign a younger player.Ronald Koeman and Joan Laporta will meet on Tuesday to discuss the future of the Barcelona coach. The president wants to make a decision in the next seven days.',
       loveIts: 0,
       created_at: new Date()
     },
     {
-      title: 'Second Post',
-      content: 'Quapropter a natura mihi videtur potius quam ab indigentia orta amicitia, applicatione magis animi cum quodam sensu amandi quam cogitatione quantum illa res utilitatis esset habitura. Quod quidem quale sit, etiam in bestiis quibusdam animadverti potest, quae ex se natos ita amant ad quoddam tempus et ab eis ita amantur ut facile earum sensus appareat. Quod in homine multo est evidentius, primum ex ea caritate quae est inter natos et parentes, quae dirimi nisi detestabili scelere non potest.',
+      title: 'Koeman',
+      content: 'The news that broke on Tuesday lunchtime appears to indicate that Ronald Koeman may still be pulling the managerial strings at Barcelona after all.Though it isn’t 100 percent confirmed at the time of writing, multiple reports suggest that Gini Wijnaldum has agreed a deal with the Catalans until 2024.That’s an awful lot of faith to show in someone if the manager isn’t supportive, and given that we know the former Liverpool star has long been courted by his countryman, we can deduce that, perhaps, Koeman will take the reins again next season.',
       loveIts: 0,
       created_at: new Date()
     },
     {
-      title: 'Third Post',
-      content: 'Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in terram defluat, aut ne plus aequo quid in amicitiam congeratur.',
+      title: 'Luis Suarez',
+      content: 'Luis Suarez has taken aim at Barcelona and Ronald Koeman once again after helping Atletico Madrid win the league title in 2020-21. The Uruguay international has already made it clear how hurt he was by the way he left the Camp Nou in the summer and has spoken once again about about his exit. The move has worked out pretty well for Suarez who scored 21 goals to fire Atletico to title glory and finish ahead of both Real Madrid and Barcelona.',
       loveIts: 0,
       created_at: new Date()
     }

@@ -7,10 +7,10 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class PostItemComponent implements OnInit {
 
-  @Input() postTitle: string | undefined;
-  @Input() postContent: string | undefined;
-  @Input() postCreatedAt: string | undefined;
-  @Input() postLoveIts: number = 0;
+  @Input() title: string | undefined;
+  @Input() content: string | undefined;
+  @Input() createdAt: string | undefined;
+  @Input() loveIts: number = 0;
 
   constructor() { }
 
@@ -18,11 +18,11 @@ export class PostItemComponent implements OnInit {
   }
 
   onLike() {
-    this.postLoveIts++;
+    this.loveIts++;
   }
 
   onDislike() {
-    this.postLoveIts--;
+    this.loveIts--;
   }
 
 }

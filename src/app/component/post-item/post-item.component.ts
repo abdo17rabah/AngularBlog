@@ -9,7 +9,7 @@ export class PostItemComponent implements OnInit {
 
   @Input() title: string | undefined;
   @Input() content: string | undefined;
-  @Input() createdAt: string | undefined;
+  @Input() createdAt!: Date;
   @Input() loveIts: number = 0;
 
   constructor() { }

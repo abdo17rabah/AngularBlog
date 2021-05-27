@@ -1,0 +1,25 @@
+<div class="container">
+  <app-appareil
+    *ngFor="let a of appareils"
+    [appareilName]="a.appareilName"
+    [appareilStatus]="a.appareilStatus"
+    [date]="a.date">
+  </app-appareil>
+  <div class="container d-flex justify-content-center">
+    <div class="row">
+      <button
+        type="button"
+        class="btn btn-success"
+        (click)="onSwitchOnAll()"
+        style="margin-right: 10px">
+        On All
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger"
+        (click)="onSwitchOffAll()">
+        Off All
+      </button>
+    </div>
+  </div>
+</div>

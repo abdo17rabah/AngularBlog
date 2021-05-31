@@ -1,6 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Appareil} from "../../model/appareil";
 import {AppareilService} from "../../services/appareil.service";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-appareil-view',
@@ -10,7 +11,7 @@ import {AppareilService} from "../../services/appareil.service";
 export class AppareilViewComponent implements OnInit, OnDestroy {
 
   appareils: Appareil[]= [];
-  appareilsSubscription: any;
+  appareilsSubscription!: Subscription;
 
   constructor(private appareilService: AppareilService) { }
 

@@ -1,0 +1,26 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">FirstName</th>
+    <th scope="col">LastName</th>
+    <th scope="col">Email</th>
+    <th scope="col">drinkPreference</th>
+    <th scope="col">hobbies</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users; let index = index;">
+    <th scope="row">{{ index }}</th>
+    <td>{{ user.firstName }}</td>
+    <td>{{ user.lastName }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.drinkPreference }}</td>
+    <td>
+      <ul class="list-group" *ngIf="user.hobbies && user.hobbies.length > 0">
+        <li class="list-group-item" *ngFor="let hobby of user.hobbies;">{{ hobby }}</li>
+      </ul>
+    </td>
+  </tr>
+  </tbody>
+</table>

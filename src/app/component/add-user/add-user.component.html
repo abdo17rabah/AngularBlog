@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="firstName">Firstname</label>
+    <input type="text" class="form-control" formControlName="firstName" id="firstName" placeholder="Firstname">
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">LastName</label>
+    <input type="text" class="form-control" formControlName="lastName" id="lastName" placeholder="Lastname">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" class="form-control" formControlName="email" id="email" placeholder="Email">
+  </div>
+
+  <div class="form-group">
+    <label for="drinkPreference">Drink preference</label>
+    <input type="text" class="form-control" formControlName="drinkPreference" id="drinkPreference" placeholder="Drink preference">
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+</form>

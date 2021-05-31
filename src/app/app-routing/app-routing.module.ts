@@ -7,6 +7,10 @@ import {BlogModule} from "../component/blog/blog.module";
 import {AppareilViewModule} from "../component/appareil-view/appareil-view.module";
 import {AuthModule} from "../component/auth/auth.module";
 import {ErrorPageModule} from "../component/error-page/error-page.module";
+import {UserListComponent} from "../component/user-list/user-list.component";
+import {UserListModule} from "../component/user-list/user-list.module";
+import {ReactiveFormsModule} from "@angular/forms";
+import {AddUserModule} from "../component/add-user/add-user.module";
 
 const appRoutes: Routes = [
   { path: 'posts', canActivate:[AuthGardService], loadChildren: () =>import('../component/blog/blog.module')
@@ -21,12 +25,14 @@ const appRoutes: Routes = [
       .then(m => m.AuthModule) },
   { path: '404', loadChildren: () =>import('../component/error-page/error-page.module')
       .then(m => m.ErrorPageModule) },
+  { path: 'users', loadChildren: () =>import('../component/user-list/user-list.module')
+      .then(m => m.UserListModule) },
+  { path: 'add-user', loadChildren: () => import('../component/add-user/add-user.module').then(m => m.AddUserModule) },
   { path: '**', redirectTo: '404' }
 ];
 
 @NgModule({
-  declarations: [
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     HomeModule,
@@ -34,7 +40,9 @@ const appRoutes: Routes = [
     BlogModule,
     AppareilViewModule,
     AuthModule,
-    ErrorPageModule
+    ErrorPageModule,
+    UserListModule,
+    AddUserModule
   ],
   exports: [RouterModule]
 })

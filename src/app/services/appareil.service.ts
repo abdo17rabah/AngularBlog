@@ -40,12 +40,14 @@ export class AppareilService {
   constructor() { }
 
   switchOnAll() {
-    this.appareils.map(a => a.appareilStatus = true)
+    this.appareils.map(a => a.appareilStatus = true);
+    this.emitAppareilSubject();
   }
 
   switchOffAll() {
     if(confirm("Voulez vous tout éteindre?")){
-      this.appareils.map(a => a.appareilStatus = false)
+      this.appareils.map(a => a.appareilStatus = false);
+      this.emitAppareilSubject();
     }
   }
 

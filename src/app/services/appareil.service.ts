@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import {Appareil} from "../model/appareil";
+import {Subject} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppareilService {
 
-  appareils = [
+  private appareils = [
     {
       id: 1,
       appareilName: 'Appareil 1',
@@ -34,6 +35,8 @@ export class AppareilService {
     },
   ];
 
+  appareilsSubject = new Subject<any []>();
+
   constructor() { }
 
   switchOnAll() {
@@ -53,5 +56,9 @@ export class AppareilService {
       }
     );
     return appareil;
+  }
+
+  emitAppareilSubject() {
+    this.appareilsSubject.next(this.appareils.slice());
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Appareil} from "../../model/appareil";
 import {AppareilService} from "../../services/appareil.service";
 
@@ -7,14 +7,20 @@ import {AppareilService} from "../../services/appareil.service";
   templateUrl: './appareil-view.component.html',
   styleUrls: ['./appareil-view.component.css']
 })
-export class AppareilViewComponent implements OnInit {
+export class AppareilViewComponent implements OnInit, OnDestroy {
 
   appareils: Appareil[]= [];
+  appareilsSubscription: any;
 
   constructor(private appareilService: AppareilService) { }
 
   ngOnInit(): void {
-    this.appareils = this.appareilService.appareils;
+    this.appareilsSubscription= this.appareilService.appareilsSubject.subscribe(
+      (appareils: any[]) => {
+        this.appareils = appareils;
+      }
+    );
+    this.appareilService.emitAppareilSubject();
   }
 
   onSwitchOnAll() {
@@ -23,6 +29,10 @@ export class AppareilViewComponent implements OnInit {
 
   onSwitchOffAll() {
     this.appareilService.switchOffAll();
+  }
+
+  ngOnDestroy() {
+    this.appareilsSubscription.unsubscribe();
   }
 
 }

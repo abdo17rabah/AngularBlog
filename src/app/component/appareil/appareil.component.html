@@ -1,0 +1,34 @@
+<div [ngClass]="appareilStatus ? 'my-3 p-3 bg-white rounded shadow-sm border border-success' : 'my-3 p-3 bg-white rounded shadow-sm border border-danger' ">
+  <div class="media text-muted pt-3">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Nom:</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [(ngModel)]="appareilName">
+    </div>
+    <span style="margin-left: 10px; margin-top: 10px;" class="badge badge-dark">
+      <a [routerLink]="[id]"
+         style="outline: none; text-decoration: none; padding: 2px; color: #fff;">Détail</a>
+    </span>
+    <div>
+      <button
+        type="button"
+        class="btn btn-success"
+        (click)="switchOn()"
+        style="margin-left: 10px; margin-right: 10px;  margin-bottom: 10px;">
+        On
+      </button>
+    </div>
+    <div>
+      <button
+        ml-3
+        type="button"
+        class="btn btn-danger"
+        (click)="switchOff()">
+        Off
+      </button>
+    </div>
+  </div>
+  <span [ngClass]="appareilStatus ?'badge badge-success' : 'badge badge-danger'">Status: {{appareilStatus ? 'ON' : 'OFF'}}</span>
+  <span style="margin-left: 10px;" class="badge badge-info">{{date | date:'fullDate'}}</span>
+</div>

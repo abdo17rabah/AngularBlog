@@ -1,0 +1,20 @@
+<h3>Authentification</h3>
+<div class="container d-flex justify-content-center">
+  <div class="row">
+    <button
+      type="button"
+      class="btn btn-success"
+      (click)="onSignIn()"
+      *ngIf="!authStatus"
+      style="margin-right: 10px">
+      Sign in
+    </button>
+    <button
+      type="button"
+      class="btn btn-danger"
+      *ngIf="authStatus"
+      (click)="onSignOut()">
+      Sign out
+    </button>
+  </div>
+</div>

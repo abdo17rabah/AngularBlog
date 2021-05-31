@@ -1,0 +1,22 @@
+<div class="my-3 p-3 bg-white rounded shadow-sm border border-info ">
+  <div class="media text-muted pt-3">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Nom:</span>
+      </div>
+      <input [disabled]="true" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [(ngModel)]="name">
+    </div>
+
+    <span style="margin-left: 10px; margin-top: 10px;" [ngClass]="status ?'badge badge-success' : 'badge badge-danger'">Status: {{status ? 'ON' : 'OFF'}}</span>
+
+    <div>
+      <button
+        type="button"
+        class="btn btn-info"
+        (click)="goBack()"
+        style="margin-left: 10px; margin-right: 10px;  margin-bottom: 10px;">
+        Revenir
+      </button>
+    </div>
+  </div>
+</div>

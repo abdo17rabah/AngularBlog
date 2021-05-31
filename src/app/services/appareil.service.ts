@@ -54,5 +54,4 @@ export class AppareilService {
     );
     return appareil;
   }
-
 }
